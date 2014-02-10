@@ -118,7 +118,7 @@ def output_answer(ans, format)
   case format
   when :json
     require 'json'
-    puts JSON.dump(ans)
+    puts ans.to_json
   when :ruby
     if ans.is_a?(String)
       puts ans
